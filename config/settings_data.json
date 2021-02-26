@@ -1,0 +1,1254 @@
+{
+  "current": {
+    "show_announcement_bar": false,
+    "show_popup": false,
+    "show_fixed_message": false,
+    "header_layout": "centered",
+    "footer_layout": "classic",
+    "product_layout": "classic",
+    "image_loading_style": "fade-in",
+    "logo_mobile": "",
+    "mobile_logo_width": 200,
+    "logo_mobile_position": "center",
+    "logo_menu_position": "left",
+    "show_search_icon_mobile": true,
+    "mobile_sidebar_position": "below",
+    "icon_style": "icons",
+    "mobile_menu_background_color": "rgba(0,0,0,0)",
+    "mobile_menu_opacity": 100,
+    "mobile_menu_link_color": "rgba(0,0,0,0)",
+    "mobile_menu_link_hover_color": "rgba(0,0,0,0)",
+    "button_primary_padding": "regular",
+    "button_primary_bg_color": "#1778be",
+    "button_primary_bg_color_transparency": 100,
+    "button_primary_border_color": "rgba(0,0,0,0)",
+    "button_primary_text_color": "#ffffff",
+    "button_primary_bg_color--highlight": "#1778be",
+    "button_primary_bg_color_transparency--highlight": 100,
+    "button_primary_border_color--highlight": "rgba(0,0,0,0)",
+    "button_primary_text_color--highlight": "#ffffff",
+    "button_primary_border_radius": 0,
+    "button_secondary_padding": "regular",
+    "button_secondary_bg_color": "rgba(0,0,0,0)",
+    "button_secondary_bg_color_transparency": 0,
+    "button_secondary_border_color": "#1778be",
+    "button_secondary_text_color": "#1778be",
+    "button_secondary_bg_color--highlight": "#ffffff",
+    "button_secondary_bg_color_transparency--highlight": 100,
+    "button_secondary_border_color--highlight": "#1778be",
+    "button_secondary_text_color--highlight": "#1778be",
+    "button_secondary_border_radius": 0,
+    "button_link_padding": "regular",
+    "button_link_text_color": "#000000",
+    "button_link_text_color--highlight": "#000000",
+    "button_link_underline_style": "solid",
+    "button_link_underline_thickness": 1,
+    "button_cart_padding": "regular",
+    "button_cart_bg_color": "#1778be",
+    "button_cart_bg_color--highlight": "#1778be",
+    "button_cart_border_color": "rgba(0,0,0,0)",
+    "button_cart_border_color--highlight": "rgba(0,0,0,0)",
+    "button_cart_text_color": "#fff",
+    "button_cart_text_color--highlight": "#fff",
+    "button_cart_icon": "",
+    "button_cart_icon_position": "left",
+    "button_cart_border_radius": 2,
+    "icon": "icon_outline",
+    "toggle_icon_style": "plus_and_minus",
+    "social_media_share_style": "squared",
+    "breadcrumb_capitalization": "none",
+    "breadcrumb_separator": "arrow",
+    "breadcrumb_size": "regular",
+    "dropdown_style": "vertical",
+    "dropdown_position": "below-parent",
+    "dropdown_link_spacing": "medium",
+    "use_placeholders": false,
+    "form_button_style": "button--primary",
+    "display_heading_divider": false,
+    "heading_divider_animation": "none",
+    "heading_divider_style": "short",
+    "heading_divider_width": 2,
+    "toggle_sidebar": false,
+    "tab_style": "underline",
+    "table_styles_enabled": true,
+    "qty_box_style": "box",
+    "qty_border_radius": 0,
+    "tag_style": "solid",
+    "mega_menu_1": true,
+    "mega_menu_2": false,
+    "mega_menu_3": false,
+    "mega_menu_4": false,
+    "mega_menu_5": false,
+    "mega_menu_6": false,
+    "mega_menu_7": false,
+    "mega_menu_8": false,
+    "mega_menu_9": false,
+    "mega_menu_10": false,
+    "shop_bg_color": "#ffffff",
+    "border_color": "#d3d3d3",
+    "regular_color": "#000000",
+    "link_color": "#000000",
+    "link_hover_color": "#000000",
+    "heading_color": "#000000",
+    "banner_heading_color": "#000000",
+    "divider_color": "#000000",
+    "logo_text": "#ffffff",
+    "header_background": "#ffffff",
+    "header_link_color": "#000000",
+    "header_link_hover_color": "#000000",
+    "header_cart_badge_color": "#ffffff",
+    "cart_background_color": "#fff",
+    "show_dropdown_shadow": true,
+    "dropdown_background": "#ffffff",
+    "dropdown_background_opacity": 100,
+    "dropdown_link_color": "#000000",
+    "dropdown_link_hover_color": "#000000",
+    "footer_background": "#ffffff",
+    "footer_border": "rgba(0,0,0,0)",
+    "footer_link_color": "#000000",
+    "footer_link_hover_color": "#000000",
+    "footer_text_color": "#000000",
+    "sale_color": "#1778be",
+    "was_price_color": "#808080",
+    "product_hover_text_color": "#000000",
+    "product_hover_bg_color": "#ffffff",
+    "banner_bestseller": "#f0d00e",
+    "banner_comingsoon": "#585757",
+    "banner_new": "#007ace",
+    "banner_preorder": "#6e6e6f",
+    "banner_sale": "#c70000",
+    "banner_staffpick": "#222222",
+    "qty_icon_color": "#fff",
+    "qty_icon_hover_color": "#ddd",
+    "qty_background_color": "#000",
+    "qty_background_hover_color": "#222",
+    "regular__font": "open_sans_n4",
+    "regular_font_size": 16,
+    "logo__font": "open_sans_n4",
+    "logo_font_size": 20,
+    "logo_font_style": "none",
+    "nav__font": "open_sans_n4",
+    "nav_font_size": 16,
+    "nav_letter_spacing": 0,
+    "nav_font_style": "uppercase",
+    "dropdown_heading_font_size": 16,
+    "dropdown_font_size": 15,
+    "dropdown_letter_spacing": 0,
+    "dropdown_font_style": "none",
+    "button__font": "open_sans_n4",
+    "button_letter_spacing": 0,
+    "button_font_style": "uppercase",
+    "heading__font": "open_sans_n4",
+    "heading_size": 22,
+    "heading_letter_spacing": 0,
+    "heading_font_style": "uppercase",
+    "preheading_font": "open_sans_n4",
+    "preheading_size": 15,
+    "preheading_style": "uppercase",
+    "subheading_font": "open_sans_n4",
+    "subheading_size": 15,
+    "subheading_style": "uppercase",
+    "banner_heading__font": "open_sans_n4",
+    "banner_heading_size": 46,
+    "banner_heading_style": "uppercase",
+    "banner_text__font": "open_sans_n4",
+    "banner_text_size": 18,
+    "banner_text_letter_spacing": 0,
+    "footer_heading_font_size": 14,
+    "footer_font_size": 16,
+    "search_option": "everything",
+    "search_title": "Search",
+    "search_placeholder": "What are you looking for?",
+    "search_heading_color": "#000",
+    "search_display_style": "popup",
+    "search_popup_bg": "#fff",
+    "search_menu": "",
+    "enable_autocomplete": true,
+    "search_to_display": 5,
+    "show_secondary_image": false,
+    "display_vendor": false,
+    "thumbnail_hover_enabled": false,
+    "thumbnail_text_alignment": "center",
+    "stickers_enabled": false,
+    "sticker_shape": "square",
+    "sticker_position": "left",
+    "collection_swatches": false,
+    "collection_swatches_shape": "square",
+    "enable_shopify_review_comments": false,
+    "enable_shopify_collection_badges": false,
+    "display_product_quantity": false,
+    "limit_quantity": false,
+    "display_inventory_left": false,
+    "inventory_threshold": 10,
+    "free_price_text": "Free",
+    "product_form_style": "dropdown",
+    "swatch_style": "square",
+    "notify_me_form": true,
+    "notify_me_description": "<p>Notify me when this product is available:<\/p>",
+    "size_chart": "",
+    "enable_quickshop": false,
+    "quickshop_button_style": "button--secondary",
+    "quickshop_show_vendor": false,
+    "quickshop_show_price_savings": true,
+    "show_dynamic_checkout_button": false,
+    "quickshop_truncate_words": false,
+    "quickshop_truncate_words_limit": 20,
+    "qs_popup_color": "#fff",
+    "show_product_gallery_thumbnails": true,
+    "quickshop_arrows": true,
+    "quickshop_magnify_images": false,
+    "quickshop_speed": 0,
+    "quickshop_gallery_transition_styles": "slide",
+    "quickshop_thumbnail_position": "bottom-thumbnails",
+    "enable_thumbnail_slider": true,
+    "quickshop_gallery_position": "left",
+    "video_looping": false,
+    "cart_action": "mini_cart",
+    "show_lock_icon": true,
+    "cart_icon": "bag",
+    "display_special_instructions": false,
+    "display_tos_checkbox": false,
+    "tos_page": "",
+    "display_savings": false,
+    "display_ajax_quantity_box": false,
+    "cart_message": "",
+    "go_to_checkout": true,
+    "enable_shipping_calculator": false,
+    "shipping_calculator_default_country": "United States",
+    "show_multiple_currencies": false,
+    "currency_format": "money_with_currency_format",
+    "supported_currencies": "USD CAD INR GBP AUD EUR JPY",
+    "default_currency": "USD",
+    "disqus_enabled": false,
+    "disqus_shortname": "",
+    "twitter_link": "",
+    "facebook_link": "",
+    "youtube_link": "",
+    "vimeo_link": "",
+    "pinterest_link": "",
+    "tumblr_link": "",
+    "instagram_link": "",
+    "snapchat_link": "",
+    "houzz_link": "",
+    "linkedin_link": "",
+    "dribbble_link": "",
+    "behance_link": "",
+    "flickr_link": "",
+    "email_link": "",
+    "og_image_fallback": "",
+    "favicon": "",
+    "checkout_header_image": "shopify:\/\/shop_images\/6.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/1x1-0000007f.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Roboto",
+    "checkout_body_font": "Lato",
+    "checkout_accent_color": "#1778be",
+    "checkout_button_color": "#1778be",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "icon_label": "tag",
+          "text": "<p>Draw attention to promos + sales!<\/p>",
+          "alignment": "center",
+          "size": "regular",
+          "button_label": "",
+          "link": "",
+          "button_style": "button--primary",
+          "background": "#000000",
+          "text_color": "#ffffff",
+          "width": "wide",
+          "homepage_only": false,
+          "enable_sticky": false,
+          "show_close_icon": true,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "header__top-bar": {
+        "type": "header__top-bar",
+        "blocks": {
+          "header__top-bar-0": {
+            "type": "text",
+            "settings": {
+              "text": "123 Main Street, Pleasantville USA"
+            }
+          },
+          "header__top-bar-1": {
+            "type": "social_media",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "header__top-bar-0",
+          "header__top-bar-1"
+        ],
+        "settings": {
+          "show_top_bar": true,
+          "font": "open_sans_n4",
+          "font_style": "none",
+          "font_size": 14,
+          "letter_spacing": 0,
+          "background": "rgba(0,0,0,0)",
+          "link_color": "rgba(0,0,0,0)",
+          "link_hover_color": "rgba(0,0,0,0)",
+          "text_color": "rgba(0,0,0,0)",
+          "width": "standard",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "header-classic": {
+        "type": "header-classic",
+        "settings": {
+          "logo": "",
+          "logo_width": 200,
+          "main_linklist": "main-menu",
+          "menu_alignment": "start",
+          "display_search": true,
+          "icon_style": "icons",
+          "enable_overlay": false,
+          "show_text_shadow": false,
+          "overlay_link_color": "rgba(0,0,0,0)",
+          "overlay_link_hover_color": "rgba(0,0,0,0)",
+          "overlay_background": "rgba(0,0,0,0)",
+          "overlay_background_opacity": 0,
+          "overlay_logo": "",
+          "overlay_logo_width": 80,
+          "enable_sticky": false,
+          "sticky_background_opacity": 50,
+          "scroll_logo_width": 80,
+          "width": "standard",
+          "vertical_alignment": "center",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "mega-menu-1": {
+        "type": "mega-menu-1",
+        "blocks": {
+          "mega-menu-1-0": {
+            "type": "menu",
+            "settings": {
+              "menu_1": "",
+              "menu_1_link": ""
+            }
+          },
+          "mega-menu-1-1": {
+            "type": "featured_promo",
+            "settings": {
+              "image": "",
+              "richtext": "<p>Add description and links to your promotion<\/p>",
+              "bgr_color": "#eeeeee",
+              "text_color": "#000000",
+              "promo_link": "",
+              "button_label": "Shop now",
+              "button_style": "button--primary"
+            }
+          },
+          "mega-menu-1-2": {
+            "type": "mixed",
+            "settings": {
+              "richtext_top": "Your headline",
+              "image_top": "",
+              "image_link_top": "",
+              "image_caption_top": "",
+              "menu_1": "",
+              "menu_1_link": "",
+              "menu_2": "",
+              "menu_2_link": "",
+              "menu_3": "",
+              "menu_3_link": "",
+              "menu_4": "",
+              "menu_4_link": "",
+              "image_bottom": "",
+              "image_link_bottom": "",
+              "richtext_bottom": ""
+            }
+          },
+          "mega-menu-1-3": {
+            "type": "empty_column",
+            "settings": {}
+          },
+          "mega-menu-1-4": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "image_link": "",
+              "image_caption": "<p>Image caption appears here<\/p>"
+            }
+          },
+          "mega-menu-1-5": {
+            "type": "featured_product",
+            "settings": {
+              "featured_product": "",
+              "richtext_bottom": ""
+            }
+          }
+        },
+        "block_order": [
+          "mega-menu-1-0",
+          "mega-menu-1-1",
+          "mega-menu-1-2",
+          "mega-menu-1-3",
+          "mega-menu-1-4",
+          "mega-menu-1-5"
+        ],
+        "settings": {
+          "parent_link": "catalog",
+          "enable_mega_menu_border": false,
+          "mega_menu_background_color": "#f6f6f6",
+          "mega_menu_text_color": "#404040",
+          "show_mega_bottom_bar": true,
+          "mega_bottom_bar_icon": "",
+          "mega_bottom_bar_text": "Add your deal, information or promotional text",
+          "mega_bottom_bar_link": "",
+          "size": "regular",
+          "bottom_banner_bg": "#007ace",
+          "bottom_banner_text": "#efefef",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "footer__icon-bar": {
+        "type": "footer__icon-bar",
+        "blocks": {
+          "footer__icon-bar-0": {
+            "type": "text",
+            "settings": {
+              "icon": "leaf",
+              "text": "100% Organic",
+              "link": ""
+            }
+          },
+          "footer__icon-bar-1": {
+            "type": "text",
+            "settings": {
+              "icon": "bunny",
+              "text": "Cruelty free",
+              "link": ""
+            }
+          },
+          "footer__icon-bar-2": {
+            "type": "text",
+            "settings": {
+              "icon": "chat",
+              "text": "24\/7 support",
+              "link": ""
+            }
+          },
+          "footer__icon-bar-3": {
+            "type": "text",
+            "settings": {
+              "icon": "truck",
+              "text": "Free shipping",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "footer__icon-bar-0",
+          "footer__icon-bar-1",
+          "footer__icon-bar-2",
+          "footer__icon-bar-3"
+        ],
+        "settings": {
+          "show_icon_bar": false,
+          "alignment": "center",
+          "icon_position": "row",
+          "size": "medium",
+          "background": "#8b8b8b",
+          "link_color": "#ffffff",
+          "link_hover_color": "#000000",
+          "text_color": "#ffffff",
+          "width": "standard",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "footer-classic": {
+        "type": "footer-classic",
+        "blocks": {
+          "footer-classic-0": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/logo_19bfbff3-9734-47bd-94bd-edaa7608ac2c.png",
+              "size": "small",
+              "text": "<p>PLAN NOW.<\/p>\n<p>SUPPORT HOTELS.<\/p>\n<p>SAVE MONEY.<\/p>",
+              "social_icons_footer": true
+            }
+          },
+          "footer-classic-1": {
+            "type": "link_list",
+            "settings": {
+              "menu": "quick-links",
+              "social_icons_footer": false
+            }
+          },
+          "1588655157779": {
+            "type": "link_list",
+            "settings": {
+              "menu": "locations-collections",
+              "social_icons_footer": false
+            }
+          },
+          "1588655167563": {
+            "type": "link_list",
+            "settings": {
+              "menu": "company",
+              "social_icons_footer": false
+            }
+          }
+        },
+        "block_order": [
+          "footer-classic-0",
+          "footer-classic-1",
+          "1588655157779",
+          "1588655167563"
+        ],
+        "settings": {
+          "copyright_text": "",
+          "display_designed_by": false,
+          "display_shopify": false,
+          "display_payment_methods": true,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "header-centered__top-bar": {
+        "type": "header-centered__top-bar",
+        "settings": {
+          "show_social_icons": false,
+          "text": "<p>Plan Now. Support Hotels. Save Money.<\/p>",
+          "font": "open_sans_n4",
+          "font_style": "none",
+          "font_size": 13,
+          "letter_spacing": 0,
+          "top_bar_background": "#1778be",
+          "top_bar_link": "#ffffff",
+          "top_bar_link_hover": "#ffffff",
+          "top_bar_text": "#ffffff",
+          "display_search": false,
+          "icon_style": "icons",
+          "cart_button_background": "#1e6598",
+          "cart_button_text": "#ffffff",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "header-centered": {
+        "type": "header-centered",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "logo_width": 200,
+          "logo_position": "between",
+          "main_linklist": "quick-links",
+          "menu_spacing": "default",
+          "enable_overlay": false,
+          "show_text_shadow": false,
+          "overlay_background": "rgba(0,0,0,0)",
+          "overlay_background_opacity": 0,
+          "overlay_link_color": "rgba(0,0,0,0)",
+          "overlay_link_hover_color": "rgba(0,0,0,0)",
+          "overlay_logo": "",
+          "overlay_logo_width": 80,
+          "enable_sticky": false,
+          "sticky_background_opacity": 50,
+          "scroll_logo_width": 200,
+          "width": "standard",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "1588618720698": {
+        "type": "index__slideshow-classic",
+        "blocks": {
+          "1588618720698-0": {
+            "type": "image",
+            "settings": {
+              "link": "",
+              "image": "shopify:\/\/shop_images\/1.jpg",
+              "mobile_image": "",
+              "pretext": "",
+              "title": "LIVE YOUR INDULGENCE.",
+              "subtitle": "<p>STEELE HOTELS&nbsp;is an innovative solution created to immediately support the independent luxury hotel industry. STEELE HOTELS will bridge the difficult time gap for our hospitality friends by offering travelers the opportunity to secure a discounted advance purchase reservation for a future stay at participating hotels worldwide. We are also committed to gifting&nbsp;10% OF OUR PROFITS&nbsp;to various charities and organizations specializing in COVID-19 relief.&nbsp; We wholeheartedly believe that the hotel industry will ultimately triumph but until restrictions are lifted, we must work together to save hotels and ignite our innate desire to explore.<\/p>",
+              "pretext_color": "#000000",
+              "heading_color": "#000000",
+              "subheading_color": "#000000",
+              "text_alignment": "center",
+              "text_horizontal_position": "center",
+              "background_color": "rgba(0,0,0,0)",
+              "background_opacity": 0,
+              "border_color": "#ffffff",
+              "border_width": 0,
+              "text_width": 80,
+              "button_1": "Search Hotels",
+              "button_1_link": "",
+              "button_1_style": "button--primary",
+              "button_2": "",
+              "button_2_link": "",
+              "button_2_style": "button--secondary",
+              "mobile_image_crop": "none",
+              "pretext_color_mobile": "rgba(0,0,0,0)",
+              "heading_color_mobile": "rgba(0,0,0,0)",
+              "subheading_color_mobile": "rgba(0,0,0,0)"
+            }
+          },
+          "1588618720698-1": {
+            "type": "image",
+            "settings": {
+              "link": "",
+              "image": "shopify:\/\/shop_images\/1.jpg",
+              "mobile_image": "",
+              "pretext": "",
+              "title": "",
+              "subtitle": "",
+              "pretext_color": "#000000",
+              "heading_color": "#000000",
+              "subheading_color": "#000000",
+              "text_alignment": "center",
+              "text_horizontal_position": "center",
+              "background_color": "#ffffff",
+              "background_opacity": 77,
+              "border_color": "#ffffff",
+              "border_width": 0,
+              "text_width": 40,
+              "button_1": "",
+              "button_1_link": "",
+              "button_1_style": "button--secondary",
+              "button_2": "",
+              "button_2_link": "",
+              "button_2_style": "button--secondary",
+              "mobile_image_crop": "none",
+              "pretext_color_mobile": "rgba(0,0,0,0)",
+              "heading_color_mobile": "rgba(0,0,0,0)",
+              "subheading_color_mobile": "rgba(0,0,0,0)"
+            }
+          }
+        },
+        "block_order": [
+          "1588618720698-0",
+          "1588618720698-1"
+        ],
+        "settings": {
+          "image_transition": "slide",
+          "image_slideshow_speed": 8,
+          "show_arrows": false,
+          "show_nav_buttons": true,
+          "mobile_text_below_image": true,
+          "width": "wide",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "1588619115802": {
+        "type": "index__rich-text",
+        "settings": {
+          "title": "The STEELE HOTELS Offer",
+          "heading_font": "open_sans_n4",
+          "heading_color": "rgba(0,0,0,0)",
+          "heading_alignment": "center",
+          "heading_size": 30,
+          "text": "<p>Browse through our exclusive global collection of participating hotels offering a limited selection of deeply discounted&nbsp;3-night room blocks available for purchase!<\/p>",
+          "text_font": "open_sans_n4",
+          "text_color": "rgba(0,0,0,0)",
+          "text_alignment": "center",
+          "text_size": 14,
+          "columns": 1,
+          "button_label": "",
+          "button_link": "",
+          "button_alignment": "center",
+          "button_style": "button--primary",
+          "background": "#f7f2e9",
+          "gradient": "rgba(0,0,0,0)",
+          "gradient_rotation": 180,
+          "width": "wide",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "padding_left": 0,
+          "padding_right": 0,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "1588620024108": {
+        "type": "index__featured-collection",
+        "settings": {
+          "title": "Featured Steele Hotels",
+          "collection": "frontpage",
+          "products_per": 4,
+          "mobile_products_per_row": "1",
+          "products_limit": 4,
+          "align_height": false,
+          "collection_height": 200,
+          "collection_style": "grid",
+          "width": "standard",
+          "show_gutter": true,
+          "padding_top": 20,
+          "padding_bottom": 0,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "1588654616047": {
+        "type": "index__rich-text",
+        "settings": {
+          "title": "",
+          "heading_font": "open_sans_n4",
+          "heading_color": "rgba(0,0,0,0)",
+          "heading_alignment": "center",
+          "heading_size": 30,
+          "text": "<p>Travelers may purchase up to two 3-night room blocks at each hotel<\/p>\n<p>Each room block will be valid 1-year from the hotel&rsquo;s official reopen date<\/p>\n<p>Limited or no blackout dates apply<\/p>\n<p>Discounted exclusive value added amenities and travel insurance are available at the time of purchase<\/p>\n<p>Any expired&nbsp;STEELE HOTELS&nbsp;vouchers will be converted into future hotel credit for the face value of purchase<\/p>\n<p>Room blocks are nonrefundable once purchased Applicable taxes are paid by the guest upon hotel check out&nbsp;<\/p>\n<p>10% OF OUR PROFITS&nbsp;will be donated to a selection of partner COVID-19 relief charities and organizations<\/p>",
+          "text_font": "open_sans_n4",
+          "text_color": "rgba(0,0,0,0)",
+          "text_alignment": "left",
+          "text_size": 16,
+          "columns": 2,
+          "button_label": "",
+          "button_link": "",
+          "button_alignment": "center",
+          "button_style": "button--primary",
+          "background": "#f7f2e9",
+          "gradient": "rgba(0,0,0,0)",
+          "gradient_rotation": 180,
+          "width": "wide",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "padding_left": 0,
+          "padding_right": 0,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "1588654841877": {
+        "type": "index__image-with-text",
+        "blocks": {
+          "1588654841877-2": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "heading_size": "regular",
+              "text": "",
+              "button_label": "View More",
+              "link": "",
+              "button_style": "button--secondary",
+              "background": "rgba(0,0,0,0)",
+              "text_color": "rgba(0,0,0,0)",
+              "alignment": "center",
+              "vertical_position": "center"
+            }
+          }
+        },
+        "block_order": [
+          "1588654841877-2"
+        ],
+        "settings": {
+          "width": "wide",
+          "show_gutter": true,
+          "padding_top": 0,
+          "padding_bottom": 20,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "1588654927954": {
+        "type": "index__newsletter",
+        "settings": {
+          "display_first_name": false,
+          "display_last_name": false,
+          "newsletter_title": "SUBSCRIBE TO OUR NEWSLETTER",
+          "newsletter_richtext": "",
+          "newsletter_section_text_align": "left",
+          "background_color": "#1778be",
+          "text_color": "#ffffff",
+          "background_image": "",
+          "image_darken": false,
+          "image": "",
+          "image_cropping": "center",
+          "image_position": "left",
+          "width": "wide",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "padding_left": 0,
+          "padding_right": 0,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "collection__banner": {
+        "type": "collection__banner",
+        "settings": {
+          "show_banner": true,
+          "image": "shopify:\/\/shop_images\/2.jpg",
+          "image_darken": false,
+          "subtitle": "",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "collection__sidebar": {
+        "type": "collection__sidebar",
+        "blocks": {
+          "collection__sidebar-0": {
+            "type": "featured_promo",
+            "settings": {
+              "promo_background": "#eeeeee",
+              "promo_text": "#000000",
+              "promo_image": "",
+              "richtext": "<p>Use this area for promotional information.<\/p>",
+              "promo_link": "",
+              "button_label": "Shop now",
+              "button_style": "button--primary"
+            }
+          },
+          "collection__sidebar-1": {
+            "type": "menu",
+            "settings": {
+              "menu": ""
+            }
+          },
+          "collection__sidebar-2": {
+            "type": "text",
+            "settings": {
+              "title": "Heading",
+              "text": "<p>Text area can be used for details about blog authors or general information.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "collection__sidebar-0",
+          "collection__sidebar-1",
+          "collection__sidebar-2"
+        ],
+        "settings": {
+          "show_sidebar": false,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "collection__main": {
+        "type": "collection__main",
+        "settings": {
+          "collection_breadcrumb": false,
+          "collection_tags": false,
+          "collection_sort": false,
+          "show_promo_banner": false,
+          "image": "",
+          "image_darken": true,
+          "promo_title": "Special sale on now!",
+          "promo_text": "<p>Description of promotion with lots of details.<\/p>",
+          "banner_height": "medium",
+          "align_height": false,
+          "collection_height": 200,
+          "products_per_row": 4,
+          "mobile_products_per_row": "1",
+          "pagination_limit": 24,
+          "pagination_type": "load_more",
+          "width": "standard",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "product__sidebar": {
+        "type": "product__sidebar",
+        "blocks": {
+          "product__sidebar-0": {
+            "type": "featured_promo",
+            "settings": {
+              "promo_background": "#eeeeee",
+              "promo_text": "#000000",
+              "promo_image": "",
+              "richtext": "<p>Use this area for promotional information.<\/p>",
+              "promo_link": "",
+              "button_label": "Shop now",
+              "button_style": "button--primary"
+            }
+          },
+          "product__sidebar-1": {
+            "type": "menu",
+            "settings": {
+              "menu": ""
+            }
+          },
+          "product__sidebar-2": {
+            "type": "text",
+            "settings": {
+              "title": "Heading",
+              "text": "<p>Text area can be used for details about blog authors or general information.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "product__sidebar-0",
+          "product__sidebar-1",
+          "product__sidebar-2"
+        ],
+        "settings": {
+          "show_sidebar": false,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "product__main": {
+        "type": "product__main",
+        "blocks": {
+          "product__main-0": {
+            "type": "recommended_products",
+            "settings": {
+              "width": "wide",
+              "padding_top": 20,
+              "padding_bottom": 20,
+              "animation": "none"
+            }
+          }
+        },
+        "block_order": [
+          "product__main-0"
+        ],
+        "settings": {
+          "product_breadcrumb": false,
+          "display_thumbnails": true,
+          "gallery_arrows": false,
+          "enable_zoom": false,
+          "enable_product_lightbox": false,
+          "slideshow_speed": 3,
+          "slideshow_transition": "slide",
+          "thumbnail_position": "bottom-thumbnails",
+          "enable_thumbnail_slider": true,
+          "display_vendor": false,
+          "display_sku": false,
+          "enable_shopify_product_badges": false,
+          "display_savings": false,
+          "display_collections": false,
+          "display_type": false,
+          "display_tags": false,
+          "display_social_buttons": true,
+          "product_description_position": "top",
+          "show_payment_button": false,
+          "product_images_position": "left",
+          "set_product_height": false,
+          "product_height": 500,
+          "video_looping": false,
+          "width": "wide",
+          "padding_top": 20,
+          "padding_bottom": 20,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "product__recommendations": {
+        "type": "product__recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "product_recommendations_style": "grid",
+          "product_recommendations_heading": "You may also like",
+          "products_per": 4,
+          "recommended_products_limit": 4,
+          "align_height": false,
+          "collection_height": 200
+        }
+      },
+      "cart__banner": {
+        "type": "cart__banner",
+        "settings": {
+          "show_banner": false,
+          "image": "",
+          "image_darken": false,
+          "subtitle": "Subheading",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "cart__main": {
+        "type": "cart__main",
+        "settings": {
+          "display_product_quantity_cart": false,
+          "display_savings": false,
+          "cart_message": "",
+          "width": "wide",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page-details__main": {
+        "type": "page-details__main",
+        "blocks": {
+          "page-details__main-2": {
+            "type": "rich_text",
+            "settings": {
+              "title": "THE STORY",
+              "heading_font": "open_sans_n4",
+              "heading_color": "rgba(0,0,0,0)",
+              "heading_alignment": "center",
+              "heading_size": 36,
+              "text": "",
+              "text_font": "open_sans_n4",
+              "text_color": "rgba(0,0,0,0)",
+              "text_alignment": "left",
+              "text_size": 14,
+              "columns": 2,
+              "button_label": "",
+              "button_link": "",
+              "button_alignment": "center",
+              "button_style": "button--primary",
+              "background": "rgba(0,0,0,0)",
+              "gradient": "rgba(0,0,0,0)",
+              "gradient_rotation": 180,
+              "width": "wide",
+              "padding_top": 20,
+              "padding_bottom": 0,
+              "padding_left": 0,
+              "padding_right": 0,
+              "animation": "none"
+            }
+          },
+          "1588656485106": {
+            "type": "image_with_text",
+            "settings": {
+              "image_position": "left",
+              "image": "shopify:\/\/shop_images\/3.jpg",
+              "image_crop": "center",
+              "image_link": "",
+              "title": "DANE STEELE GREEN",
+              "heading_size": "regular",
+              "text": "<p><strong>&ldquo;Once you have traveled, the voyage never ends, but is played out over and over again in the quietest of places. The mind can never break off from the journey.&rdquo;<\/strong><\/p>\n<p>-Pat Conroy<\/p>\n<p>Dane Steele Green created Steele Luxury Travel in&nbsp;2007. Dane&rsquo;s first projects focused on the underserved LGBT luxury travel segment where he created top rate travel experiences to exotic destinations worldwide. Steele Luxury Travel expanded by offering premium corporate travel services, international destination wedding and event planning as well as offering his VIP leisure clients discounted business and first class airfare worldwide. &nbsp; Dane has been featured in numerous publications including, The New York Times, Wired Miami, Crane&rsquo;s and Wall Street Journal. While the profile of Steele Luxury Travel has grown, Dane&rsquo;s philosophy of individualized customer service and personalized care has remained the same. He lives and breathes his motto: Live Your Indulgence.&reg;<\/p>",
+              "button_label": "",
+              "link": "",
+              "button_style": "button--primary",
+              "alignment": "left",
+              "vertical_position": "center",
+              "background": "#f7f2e9",
+              "text_color": "#5f5f5f",
+              "width": "wide",
+              "show_gutter": false,
+              "padding_top": 20,
+              "padding_bottom": 0,
+              "animation": "none"
+            }
+          },
+          "1588656696530": {
+            "type": "image_with_text",
+            "settings": {
+              "image_position": "right",
+              "image": "shopify:\/\/shop_images\/4.jpg",
+              "image_crop": "center",
+              "image_link": "",
+              "title": "HAYLEY CORWICK",
+              "heading_size": "regular",
+              "text": "<p><strong>&ldquo;Travel has the power to alter one&rsquo;s being to the very core. The transformation can be so powerful that it has shown to have the power change one&rsquo;s DNA .&rdquo;<\/strong><\/p>\n<p>-Hayley Corwick<\/p>\n<p>Hayley Corwick is a fashion-business journalist turned blogger. She is the founder of one of the most well known fashion and shopping blogs, which provides keen coverage of the retail market. Her journalism experience includes years at Smart Money (Dow Jones), New York Magazine and ABC News. &nbsp; After leaving the newsroom, Hayley spent several years heading up the interactive marketing department for Citi and has subsequently been a marketing consultant for several retailers, hedge funds and non-profit organizations. Her skills and knowledge have been highlighted throughout the media, including The New York Times, Glamour, Travel &amp; Leisure, New York Post, USA&nbsp;Today&nbsp;and Forbes.<\/p>",
+              "button_label": "",
+              "link": "",
+              "button_style": "button--primary",
+              "alignment": "left",
+              "vertical_position": "center",
+              "background": "#f7f2e9",
+              "text_color": "#5f5f5f",
+              "width": "wide",
+              "show_gutter": false,
+              "padding_top": 0,
+              "padding_bottom": 20,
+              "animation": "none"
+            }
+          }
+        },
+        "block_order": [
+          "page-details__main-2",
+          "1588656485106",
+          "1588656696530"
+        ],
+        "settings": {
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page-contact__banner": {
+        "type": "page-contact__banner",
+        "settings": {
+          "show_banner": false,
+          "image": "",
+          "image_darken": false,
+          "subtitle": "Subheading",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page-contact__main": {
+        "type": "page-contact__main",
+        "blocks": {
+          "page-contact__main-0": {
+            "type": "textfield",
+            "settings": {
+              "label": "Name",
+              "required": true
+            }
+          },
+          "page-contact__main-1": {
+            "type": "email",
+            "settings": {
+              "label": "Email"
+            }
+          },
+          "page-contact__main-2": {
+            "type": "textarea",
+            "settings": {
+              "label": "Message",
+              "required": true
+            }
+          },
+          "1588657124557": {
+            "type": "textfield",
+            "settings": {
+              "label": "Message Title",
+              "required": false
+            }
+          }
+        },
+        "block_order": [
+          "page-contact__main-0",
+          "page-contact__main-1",
+          "1588657124557",
+          "page-contact__main-2"
+        ],
+        "settings": {
+          "content_image": "",
+          "title": "",
+          "content_text": "",
+          "social_enable": false,
+          "text_alignment": "left",
+          "background": "#ffffff",
+          "text_color": "#000000",
+          "form_position": "right",
+          "width": "wide",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page-contact__sections": {
+        "type": "page-contact__sections",
+        "settings": {}
+      },
+      "blog__banner": {
+        "type": "blog__banner",
+        "settings": {
+          "show_banner": false,
+          "image": "",
+          "image_darken": false,
+          "subtitle": "Subheading",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "blog__sidebar": {
+        "type": "blog__sidebar",
+        "blocks": {
+          "blog__sidebar-0": {
+            "type": "featured_promo",
+            "settings": {
+              "promo_background": "#eeeeee",
+              "promo_text": "#000000",
+              "promo_image": "",
+              "richtext": "<p>Use this area for promotional information.<\/p>",
+              "promo_link": "",
+              "button_label": "Shop now",
+              "button_style": "button--primary"
+            }
+          },
+          "blog__sidebar-1": {
+            "type": "menu",
+            "settings": {
+              "menu": ""
+            }
+          },
+          "blog__sidebar-2": {
+            "type": "text",
+            "settings": {
+              "title": "Heading",
+              "text": "<p>Text area can be used for details about blog authors or general information.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "blog__sidebar-0",
+          "blog__sidebar-1",
+          "blog__sidebar-2"
+        ],
+        "settings": {
+          "show_sidebar": false,
+          "sidebar_position": "left",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "blog__main": {
+        "type": "blog__main",
+        "settings": {
+          "blog_tags": false,
+          "blog_posts_per_row": 3,
+          "blog_posts_per_page": 6,
+          "pagination_type": "basic_pagination",
+          "blog_author": false,
+          "blog_date": true,
+          "blog_read_time": false,
+          "blog_comment_count": false,
+          "blog_show_tags": false,
+          "blog_show_excerpt": true,
+          "show_border": false,
+          "button_label": "",
+          "button_type": "button--primary",
+          "width": "standard",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      }
+    },
+    "content_for_index": [
+      "1588618720698",
+      "1588619115802",
+      "1588654616047",
+      "1588620024108",
+      "1588654841877",
+      "1588654927954"
+    ]
+  }
+}

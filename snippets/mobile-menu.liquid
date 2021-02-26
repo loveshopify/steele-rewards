@@ -1,0 +1,58 @@
+<div class="mobile-menu">
+  <div class="mobile-menu__content">
+    <ul class="mobile-menu__list has-margin-bottom">
+      {% if settings.header_layout == 'vertical' %}
+        {% for block in nav_blocks %}
+          {% if block.type == 'navigation' %}
+            {% assign main_menu = linklists[block.settings.main_linklist] %}
+            {% include 'mobile-menu-loop' %}
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {% assign main_menu = linklists[section.settings.main_linklist] %}
+        {% include 'mobile-menu-loop' %}
+      {% endif %}
+
+      {% if settings.show_multiple_currencies %}
+        {% comment %} Currency converter select {% endcomment %}
+        <li>
+          <div class="mobile-menu__item mobile__currency-dropdown">
+              {% if settings.icon_style != 'text' %}
+                {% include settings.icon, name: 'globe' %}
+              {% endif %}
+              <span class="icon-caption select is-arrowless">
+                {% include 'header__currencies-switcher' %}
+              </span>
+          </div>
+        </li>
+      {% endif %}
+
+      {% if shop.customer_accounts_enabled %}
+        {% comment %} Accounts {% endcomment %}
+        <li>
+          {% if customer %}
+            {% comment %} Logout {% endcomment %}
+            <a class="mobile-menu__item item-with-icon" href="{{ routes.account_url }}" >
+              {% if settings.icon_style != 'text' %}
+                {% include settings.icon, name: 'avatar' %}
+              {% endif %}
+              <span class="icon-caption">
+                {{ 'layout.customer.my_account' | t | escape }}
+              </span>
+            </a>
+          {% else %}
+            {% comment %} Login {% endcomment %}
+            <a class="mobile-menu__item item-with-icon" href="{{ routes.account_login_url }}" >
+              {% if settings.icon_style != 'text' %}
+                {% include settings.icon, name: 'avatar' %}
+              {% endif %}
+              <span class="icon-caption">
+                {{ 'layout.customer.log_in' | t | escape }}
+              </span>
+            </a>
+          {% endif %}
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</div>

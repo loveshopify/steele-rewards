@@ -1,0 +1,62 @@
+{% comment %}Assign object as block or section{% endcomment %}
+{% if type == 'block' %}
+  {% assign object = block %}
+{% else %}
+  {% assign object = section %}
+{% endif %}
+
+<div class="header__icons header__icon-style-{{ object.settings.icon_style | replace: '_', '-' }} {{ header_icon_class }}">
+
+  {% if object.settings.display_search %}
+    {% comment %} Search icon {% endcomment %}
+    <a class="header__link action-area__link" data-show-search-trigger>
+      {% include settings.icon, name: 'search', icon_class: 'header__icon' %}
+      <span class="icon-caption">{{ 'general.search.title' | t | escape }}</span>
+    </a>
+  {% endif %}
+
+  {% if settings.show_multiple_currencies %}
+    {% comment %} Currency converter select {% endcomment %}
+    <div class="header__currency-dropdown header__link action-area__link">
+        {% include settings.icon, name: 'globe', icon_class: 'header__icon' %}
+        <span class="icon-caption select is-arrowless">
+          {% include 'header__currencies-switcher' %}
+        </span>
+    </div>
+  {% endif %}
+
+  {% comment %} {% if shop.customer_accounts_enabled %}
+    {% if customer %}
+      <a href="{{ routes.account_url }}" class="header__link action-area__link" >
+          {% include settings.icon, name: 'avatar', icon_class: 'header__icon' %}
+          <span class="icon-caption">{{ 'layout.customer.my_account' | t | escape }}</span>
+      </a>
+    {% else %}
+      <a href="{{ routes.account_login_url }}" class="header__link action-area__link" >
+          {% include settings.icon, name: 'avatar', icon_class: 'header__icon' %}
+          <span class="icon-caption">{{ 'layout.customer.log_in' | t | escape }}</span>
+      </a>
+    {% endif %}
+  {% endif %} {% endcomment %}
+
+  {% comment %} Cart icon {% endcomment %}
+  <div class="header-cart action-area__link {% if cart.item_count != 0 %}has-cart-count{% endif %}" data-ajax-cart-trigger>
+    <a class="header__link" href="{{ routes.cart_url }}" >
+      <span class="header-cart__icon">
+        {% include settings.icon, name: settings.cart_icon, icon_class: 'header__icon' %}
+        <span class="header-cart__count header-cart__count--badge badge" data-bind="itemCount">
+          {{ cart.item_count }}
+        </span>
+      </span>
+      <span class="header-cart__caption icon-caption">
+        {{ 'layout.general.cart' | t | escape }}
+        {%- if object.settings.icon_style == 'text' -%}
+          <span class="header-cart__count cart__count--text" data-bind="itemCount">{{ cart.item_count }}</span>
+        {%- endif -%}
+      </span>
+    </a>
+    {% if settings.cart_action == 'mini_cart' %}
+      {% include 'ajax-cart' %}
+    {% endif %}
+  </div>
+</div>

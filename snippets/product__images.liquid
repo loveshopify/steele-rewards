@@ -1,0 +1,174 @@
+{% comment %}Assign object as block or section{% endcomment %}
+{% if type == 'block' %}
+  {% assign object = block %}
+{% else %}
+  {% assign object = section %}
+{% endif %}
+
+{% assign display_thumbnails = object.settings.display_thumbnails %}
+{% assign thumbnail_position = object.settings.thumbnail_position %}
+{% assign enable_thumbnail_slider = object.settings.enable_thumbnail_slider %}
+{% assign gallery_arrows = object.settings.gallery_arrows %}
+{% assign slideshow_transition = object.settings.slideshow_transition %}
+
+{% style %}
+  .shopify-model-viewer-ui model-viewer {
+    --progress-bar-height: 2px;
+    --progress-bar-color: {{ settings.regular_color }};
+  }
+
+  {% if object.settings.set_product_height == true %}
+    .product-{{ product.id }} .product-gallery__model model-viewer {
+      min-height: {{ object.settings.product_height }}px;
+    }
+
+    .product-{{ product.id }} .product-gallery__main img,
+    .product-{{ product.id }} .product-gallery__main .plyr--html5 video,
+    .product-{{ product.id }} .product-gallery__main .plyr--youtube {
+      max-height: {{ object.settings.product_height }}px;
+    }
+  {% endif %}
+{% endstyle %}
+
+
+
+{% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
+
+<div class="product-gallery
+            product-gallery__thumbnails--{{ display_thumbnails }}
+            product-gallery--media-amount-{{ product.media.size }}
+            slideshow-transition--{{ slideshow_transition }}
+            {% if object.settings.thumbnail_position %}product-gallery--{{ thumbnail_position }}{% endif %}
+            display-arrows--{{ gallery_arrows }}
+            {% if object.settings.set_product_height == true %}has-height-set{%endif %}"
+            data-video-loop="{{ object.settings.video_looping }}">
+  <div class="product-gallery__main" data-product-id="{{ product.id }}" data-media-count="{{ product.media.size }}">
+
+    {% for media in product.media %}
+
+      {% comment %} Check alt text for video iframe {% endcomment %}
+      <div class="product-gallery__image "
+            data-product-id="{{ product.id }}"
+            data-title="{% if image_alt contains 'youtube' or image_alt contains 'vimeo' %}{{ product.title }}{% else %}{{ image_alt | escape }}{% endif %}"
+            data-image-height="{{ original_image_height | strip }}"
+            data-image-width="{{ original_image_width | strip }}"
+            data-media-type="{{ media.media_type }}">
+
+        {% case media.media_type %}
+          {% when 'image' %}
+
+            {% capture image_id %}{{ media.id }}{% endcapture %}
+            {% capture image_alt %}{{ media.alt | escape }}{% endcapture %}
+            {% capture image_100x %}{{ media | img_url: '100x' }}{% endcapture %}
+            {% capture image_200x %}{{ media | img_url: '200x' }}{% endcapture %}
+            {% capture image_400x %}{{ media | img_url: '400x' }}{% endcapture %}
+            {% capture image_600x %}{{ media | img_url: '600x' }}{% endcapture %}
+            {% capture image_800x %}{{ media | img_url: '800x' }}{% endcapture %}
+            {% capture image_1200x %}{{ media | img_url: '1200x' }}{% endcapture %}
+            {% capture image_2000x %}{{ media | img_url: '2000x' }}{% endcapture %}
+            {% capture image_5000x %}{{ media | img_url: '5000x' }}{% endcapture %}
+
+            {% if image_alt contains 'youtube' or image_alt contains 'vimeo' %}
+
+              {% assign alt_text = image_alt | split: ' ' %}
+              {% for property in alt_text %}
+                {% if property contains "src" %}
+                  {% assign cleanURL =  property | remove: 'src=' | remove: '&quot;' | remove: '"' %}
+                  <div class="product-gallery__video" data-youtube-video>
+                    <iframe src="{{ cleanURL }}" frameborder="0"></iframe>
+                  </div>
+                {% endif %}
+              {% endfor %}
+
+            {% else %}
+              {% if object.settings.enable_product_lightbox and product.media.size > 0 %}
+                <a href="{{ media | img_url: '2048x' }}" class="product-gallery__link" data-fancybox="{{ product.id }}" title="{{ media.alt | escape }}">
+              {% endif %}
+
+              <div class="image__container" style="max-width: {{ media.width }}px">
+                <img id="{{ media.id }}"
+                class="lazyload lazyload--fade-in"
+                src="{{ media | img_url: '50x' }}"
+                alt="{{ media.alt | escape }}"
+                data-image-id="{{ product.media[forloop.index0].id }}"
+                data-index="{{ forloop.index0 }}"
+                data-sizes="auto"
+                data-src="{{ image_2000x }}"
+                srcset=" {{ image_200x }} 200w,
+                        {{ image_400x }} 400w,
+                        {{ image_600x }} 600w,
+                        {{ image_800x }} 800w,
+                        {{ image_1200x }} 1200w,
+                        {{ image_2000x }} 2000w"
+                >
+              </div>
+
+              <noscript>
+                <img  src="{{ image_1200x }}"
+                      alt="{{ image_alt | escape }}"
+                      class="lazyloaded lazyload fallbackImage" />
+              </noscript>
+
+              {% if object.settings.enable_product_lightbox and product.media.size > 0 %}
+                </a>
+              {% endif %}
+            {% endif %}
+          {% when 'external_video' %}
+            <div class="product-gallery__video" data-youtube-video>
+              {{ media | external_video_tag }}
+            </div>
+          {% when 'video' %}
+            <div class="product-gallery__video" data-html5-video>
+              {{ media | video_tag: image_size: '300x300', controls: true }}
+            </div>
+          {% when 'model' %}
+            <div class="product-gallery__model is-relative">
+              {{ media | model_viewer_tag: reveal: 'interaction', toggleable: true, image_size: '800x800' }}
+            </div>
+          {% else %}
+            {{ media | media_tag }}
+        {% endcase %}
+        {% assign has_model = product.media | where: "media_type", "model" | first %}
+        {% if has_model %}
+          <button class="action_button view-in-your-space" data-shopify-xr data-shopify-model3d-id="{% if media.media_type == 'model' %}{{ media.id }}{% else %}{{ has_model.id }}{% endif %}" data-shopify-title={{ product.title }} style="display: none;">
+            <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16 9L22.0622 12.5V19.5L16 23L9.93782 19.5V12.5L16 9Z" stroke="#3A3A3A" stroke-width="1.5"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16 23V15.6024C16.6225 15.2002 16.6225 15.2002 16.6225 15.2002L22 12V19.4082L16 23Z" fill="#3A3A3A"/>
+            </svg>
+            {{ 'products.product.view_in_your_space' | t | capitalize }}
+          </button>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  {% if object.settings.display_thumbnails == true %}
+    {% if thumbnail_position != 'no-thumbnails' and product.media.size > 1 %}
+      <div class="product-gallery__thumbnails
+                product-gallery__thumbnails--{{ thumbnail_position }}
+                is-slide-nav--{{ object.settings.enable_thumbnail_slider }}
+                {% if object.settings.enable_thumbnail_slider == false %}
+                  container equal-columns--outside-trim
+                  is-justify-center
+                {% endif %}">
+        {% for media in product.media %}
+
+          {% if media.media_type contains 'video' %}
+            {% assign thumbnail_badge = 'video-thumbnail' %}
+          {% elsif media.media_type contains 'model' %}
+            {% assign thumbnail_badge = '3d-thumbnail' %}
+          {% else %}
+            {% assign thumbnail_badge = '' %}
+          {% endif %}
+
+          <div class="product-gallery__thumbnail one-fifth column is-relative"
+                data-title="{{ media.alt | escape }}" tabindex="0">
+            <img src="{{ media | img_url: '300x' }}" alt="">
+            {% if thumbnail_badge != blank %}
+              {% include settings.icon, name: thumbnail_badge, icon_class: 'media-badge' %}
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
