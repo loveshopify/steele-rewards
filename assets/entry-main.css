@@ -1,0 +1,53 @@
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js?importLoaders=1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-2.use[3]!./src/styles/main.css ***!
+  \************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/**
+Import all other libs using this markup
+ */
+.section-artist {
+  border-top: 1px solid #B3B2B2;
+  border-bottom: 1px solid #B3B2B2;
+  padding: 0 17px 20px;
+}
+.section-artist .artist-section-title {
+    color: #353941;
+    font-size: 14px;
+    font-family: 'Greyst';
+    font-weight: 400;
+    line-height: 24.08px;
+    letter-spacing: 0.56px;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 20px 0;
+  }
+.section-artist .artist-slider {
+    width: 100%;
+    opacity: 0;
+  }
+.section-artist .artist-slider img {
+      width: 100%;
+      aspect-ratio: 1;
+      height: auto;
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+.section-artist .artist-slider .artist-name {
+      color: #353941;
+      font-size: 12px;
+      font-family: var(--font-body-family);
+      font-weight: 300;
+      line-height: 20.64px;
+      letter-spacing: 0.48px;
+      text-align: center;
+      margin: 0;
+      width: -moz-max-content;
+      width: max-content;
+    }
+.section-artist .artist-slider .artist-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center;
+    }
+
