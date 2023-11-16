@@ -1,0 +1,43 @@
+
+<div class="custom-product-card">
+  <div class="image-wrap">
+    {% if card_product.featured_image != null %}
+      <img class="card-prouct-image" src="{{ card_product.featured_image | img_url : "500x" }}" width height loading="lazy" />
+    {% endif %}
+    <div class="card__badge ">
+      {%- if card_product.available == false -%}
+        <span
+          id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+          class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
+        >
+          {{- 'products.product.sold_out' | t -}}
+        </span>
+      {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+        <span
+          id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+          class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+        >
+          {{- 'products.product.on_sale' | t -}}
+        </span>
+      {%- endif -%}
+    </div>
+  </div>
+  <div class="custom-product-card-content">
+    <div class="title-wrap">
+      <h2 class="collection-title">{{ collection.title }}</h2>
+      <a href="{{ card_product.url }}"><h3 class="proudct-title">{{ card_product.title }}</h3></a>
+    </div>
+    <div class="price-wrap">
+      <script type="application/json">
+        {{ card_product | json }}
+      </script>
+      {% if card_product.compare_at_price != blank %}
+        <span class="card-product-price card-product-compare-at-price">{{ card_product.compare_at_price | money }}</span>
+      {% endif %}
+      {% if card_product.price != blank%}
+        <span class="card-product-price card-unit-price">{{ card_product.price | money }}</span>
+      {% endif %}
+     
+    </div>
+  </div>  
+</div>

@@ -1,177 +1,169 @@
-{% if related_products == true %}
-  {% assign hover_enabled = block.settings.show_related_products_title_on_hover %}
-{% else %}
-  {% assign hover_enabled = settings.thumbnail_hover_enabled %}
-{% endif %}
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{% comment %}
+    Renders a product thumbnail with a modal-opener
 
-{% if type == 'block' %}
-  {% assign object = block %}
-{% else %}
-  {% assign object = section %}
-{% endif %}
+    Accepts:
+    - media: {Object} Product Media object
+    - media_count: {Number} Number of media objects
+    - position: {String} Position of the media. Used for accessible label.
+    - desktop_layout: {String} Layout of the media for desktop.
+    - mobile_layout: {String} Layout of the media for mobile.
+    - loop: {Boolean} Enable video looping (optional)
+    - modal_id: {String} The product modal that will be shown by clicking the thumbnail
+    - xr_button: {Boolean} Renders the "View in your space" button (shopify-xr-button) if the media is a 3D Model
+    - constrain_to_viewport: {Boolean} Force media height to fit within viewport
+    - media_fit: {String} Method ("contain" or "cover") to fit image into container
+    - media_width: {Float} The width percentage that the media column occupies on desktop.
+    - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
 
-{% assign secondaryImage = product.media[1] %}
+    Usage:
+    {% render 'product-thumbnail',
+      media: media,
+      position: forloop.index,
+      loop: section.settings.enable_video_looping,
+      modal_id: section.id
+    %}
+{% endcomment %}
 
-{% assign collection_handles = product.collections | map: 'handle' %}
-{% if product.featured_media.preview_image.alt contains 'youtube' or image.alt contains 'vimeo' %}
-  {% assign alt_text = product.title %}
-{% else %}
-  {% assign alt_text = product.featured_media.preview_image.alt %}
-{% endif %}
+{%- liquid
+  unless lazy_load == false
+    assign lazy = 'lazy'
+  endunless
 
-{% if type == 'block' %}
-  {% assign image_crop = block.settings.image_crop %}
-{% else %}
-  {% assign image_crop = section.settings.image_crop %}
-{% endif %}
+  assign desktop_columns = 1
+  if desktop_layout == 'columns' and media_count > 1
+    assign desktop_columns = 2
+  endif
 
-{% if section.settings.align_height == true %}
-{% style %}
-  .product-{{ product.id }} .image__container img,
-  .product-{{ product.id }} .product-thumbnail__video .plyr {
-    max-width: 100%;
-    width: {{ height }}px;
-    margin: 0 auto;
-  }
+  assign mobile_columns = 1
+  if mobile_layout == 'columns' and media_count > 1
+    assign mobile_columns = 2
+  endif
 
-  .shopify-model-viewer-ui model-viewer {
-    --progress-bar-height: 2px;
-    --progress-bar-color: {{ settings.regular_color }};
-  }
-{% endstyle %}
-{% endif %}
+  if media.media_type == 'image'
+    assign image_class = 'image-magnify-' | append: section.settings.image_zoom
+  endif
+-%}
 
-<div class="
-  {% include 'column-width', value: products_per_row %}
-  medium-down--one-half
-  {% if object.settings.mobile_products_per_row == '1' %}
-    small-down--one-whole
-  {% else %}
-    small-down--one-half
-  {% endif %}
-  column
-  {% if settings.enable_quickshop %}
-    quick-shop--true
-    quick-shop--closed
-    product-{{ product.id }} js-product_section
-  {% endif %}
-  {% if settings.stickers_enabled %}
-    has-thumbnail-sticker
-  {% endif %}
-  {% if product.media[1] != blank and settings.show_secondary_image == true %}
-    has-secondary-image-swap
-  {% endif %}
-  thumbnail
-  product__thumbnail
-  product__grid-item
-  thumbnail__hover-overlay--{{ hover_enabled }}
-  has-padding-bottom"
-  {% if section.settings.pagination_type != 'basic_pagination' %}
-    data-load-more--grid-item
-  {% endif %}>
-  <div class="product-wrap">
+{%- capture sizes -%}
+  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | times: media_width | divided_by: desktop_columns | round }}px, (min-width: 990px) calc({{ media_width | times: 100 | divided_by: desktop_columns }}vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / {{ mobile_columns }} - 4rem)
+{%- endcapture -%}
 
-      <div class="product-image__wrapper">
-        <div class="image__container product__imageContainer">
-          <a href="{{ product.url | within: collection }}">
-            {% if settings.stickers_enabled %}
-              {% include 'product-thumbnail__sticker' %}
-            {% endif %}
-
-            {% comment %} Primary image {% endcomment %}
-            {% include 'image-element', image: product.featured_media.preview_image, alt: alt_text, object_fit: align_height, max_height: height %}
-
-            {% comment %} Secondary image {% endcomment %}
-            {% if product.media[1] != blank and settings.show_secondary_image == true %}
-              {% if product.media[1].media_type == 'external_video' %}
-                <div class="product-thumbnail__video secondary swap--visible video-on-hover">
-                  <div data-youtube-video>
-                    {{ product.media[1] | external_video_tag }}
-                  </div>
-                </div>
-              {% elsif product.media[1].media_type == 'video' %}
-                <div class="product-thumbnail__video secondary swap--visible video-on-hover" data-html5-video>
-                  {{ product.media[1] | video_tag: controls: false }}
-                </div>
-              {% else %}
-                {% include 'image-element', image: product.media[1], alt: alt_text, object_fit: align_height, max_height: height, additional_classes: 'lazypreload secondary swap--visible' %}
-              {% endif %}
-            {% endif %}
-          </a>
-        </div>
-
-        {% if hover_enabled or settings.enable_quickshop %}
-          <div class="thumbnail-overlay__container">
-            <a class="hidden-product-link" href="{{ product.url | within: collection }}">{{ product.title }}</a>
-
-            {% if hover_enabled %}
-              <div class="quick-shop__info animated fadeInDown">
-                <div class="thumbnail-overlay">
-                  <div class="info text-align-center">
-                    {% if settings.display_vendor %}
-                      <span class="product-thumbnail__vendor">{{ product.vendor }}</span>
-                    {% endif %}
-
-                    <p class="product-thumbnail__title">{{ product.title }}</p>
-
-                    {% if collection_handles contains 'coming-soon' %}
-                      <span>{{ 'collections.general.coming_soon' | t }}</span>
-                    {% else %}
-                      <span class="product-thumbnail__price price {% if product.compare_at_price_max > product.price %}sale{% endif %}">
-                        {% if product.available %}
-                          {% if product.price_varies and product.price_min > 0 %}
-                            <small><em>{{ 'products.general.from' | t }}</em></small>
-                          {% endif %}
-                          {% if product.price_min > 0 %}
-                            <span class="money">{{ product.price_min | money }}</span>
-                          {% else %}
-                            {{ settings.free_price_text }}
-                          {% endif %}
-                          {% if product.compare_at_price_max > product.price %}
-                            <span class="product-thumbnail__was-price was-price">
-                              <span class="money">{{ product.compare_at_price_max | money }}</span>
-                            </span>
-                          {% endif %}
-                        {% else %}
-                          <span class="product-thumbnail__sold-out sold-out">{{ 'products.product.sold_out' | t }}</span>
-                        {% endif %}
-                      </span>
-                    {% endif %}
-                  </div>
-                </div>
-              </div>
-            {% endif %}
-
-            {% if settings.enable_quickshop %}
-              {% include 'product-thumbnail__quick-shop-button' %}
-            {% endif %}
-
-            {% if hover_enabled %}
-              {% if settings.enable_shopify_collection_badges and settings.enable_shopify_review_comments %}
-                <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
-              {% endif %}
-            {% endif %}
-
-          </div>
-        {% endif %}
-
+<div
+  class="product-media-container media-type-{{ media.media_type }} media-fit-{{ media_fit }} global-media-settings gradient{% if constrain_to_viewport %} constrain-height{% endif %}"
+  style="--ratio: {{ media.aspect_ratio | default: 1.0 }}; --preview-ratio: {{ media.preview_image.aspect_ratio | default: 1.0 }};"
+>
+  <noscript>
+    {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+      <span class="product__media-icon motion-reduce quick-add-hidden">{% render 'icon-play' %}</span>
+      <div class="product__media media">
+        {{ media.preview_image | image_url: width: 1946 | image_tag:
+          loading: lazy,
+          sizes: sizes,
+          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+        }}
       </div>
-
-      <div class="thumbnail__caption text-align-{{ settings.thumbnail_text_alignment }}">
-        {% include 'product-thumbnail__product-info' %}
+      <a href="{% if media.media_type == 'video' %}{{ media.sources[1].url }}{% else %}{{ media | external_video_url }}{% endif %}" class="product__media-toggle">
+        <span class="visually-hidden">{{ 'products.product.video_exit_message' | t: title: product.title | escape }}</span>
+      </a>
+    {%- else -%}
+      <div class="product__media media">
+        {{ media.preview_image | image_url: width: 1946 | image_tag:
+          loading: lazy,
+          sizes: sizes,
+          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+        }}
       </div>
+    {%- endif -%}
+  </noscript>
 
-  </div>
-
-  {% include 'product-thumbnail__swatch' %}
-
-  {% if hover_enabled == false %}
-    {% if settings.enable_shopify_collection_badges and settings.enable_shopify_review_comments %}
-    <div class="product-thumbnail__review-stars is-flex is-justify-{{ settings.thumbnail_text_alignment }}">
-      <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+  <modal-opener class="product__modal-opener product__modal-opener--{{ media.media_type }} no-js-hidden" data-modal="#ProductModal-{{ modal_id }}">
+    <span class="product__media-icon motion-reduce quick-add-hidden{% if media.media_type == 'image' %} product__media-icon--{{ section.settings.image_zoom }}{% endif %}" aria-hidden="true">
+      {%- liquid
+        case media.media_type
+        when 'video' or 'external_video'
+          render 'icon-play'
+        when 'model'
+          render 'icon-3d-model'
+        else
+          render 'icon-zoom'
+        endcase
+      -%}
+    </span>
+    {%- render 'loading-spinner' -%}
+    <div class="product__media media media--transparent">
+      {{ media.preview_image | image_url: width: 1946 | image_tag:
+        class: image_class,
+        loading: lazy,
+        sizes: sizes,
+        widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+      }}
     </div>
-    {% endif %}
-  {% endif %}
+    <button class="product__media-toggle quick-add-hidden product__media-zoom-{{ section.settings.image_zoom }}" type="button" aria-haspopup="dialog" data-media-id="{{ media.id }}">
+      <span class="visually-hidden">
+        {{ 'products.product.media.open_media' | t: index: position }}
+      </span>
+    </button>
+  </modal-opener>
 
+  {%- if media.media_type != 'image' -%}
+    {%- if media.media_type == 'model' -%}
+      <product-model class="deferred-media media media--transparent no-js-hidden" data-media-id="{{ media.id }}">
+    {%- else -%}
+      <deferred-media class="deferred-media media media--transparent no-js-hidden" data-media-id="{{ media.id }}">
+    {%- endif -%}
+    <button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster" type="button">
+      <span class="deferred-media__poster-button motion-reduce">
+        {%- if media.media_type == 'model' -%}
+          <span class="visually-hidden">{{ 'products.product.media.play_model' | t }}</span>
+          {%- render 'icon-3d-model' -%}
+        {%- else -%}
+          <span class="visually-hidden">{{ 'products.product.media.play_video' | t }}</span>
+          {%- render 'icon-play' -%}
+        {%- endif -%}
+      </span>
+      {{ media.preview_image | image_url: width: 1946 | image_tag:
+        loading: lazy,
+        sizes: sizes,
+        widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+      }}
+    </button>
+    <template>
+      {%- liquid
+        case media.media_type
+        when 'external_video'
+          assign video_class = 'js-' | append: media.host
+          if media.host == 'youtube'
+            echo media | external_video_url: autoplay: true, loop: loop, playlist: media.external_id | external_video_tag: class: video_class, loading: "lazy"
+          else
+            echo media | external_video_url: autoplay: true, loop: loop | external_video_tag: class: video_class, loading: "lazy"
+          endif
+        when 'video'
+          echo media | media_tag: image_size: "2048x", autoplay: true, loop: loop, controls: true, preload: "none"
+        when 'model'
+          echo media | media_tag: image_size: "2048x", toggleable: true
+        endcase
+      -%}
+    </template>
+
+    {%- if media.media_type == 'model' -%}
+      </product-model>
+      {%- if xr_button -%}
+        <button
+          class="button button--full-width product__xr-button"
+          type="button"
+          aria-label="{{ 'products.product.xr_button_label' | t }}"
+          data-shopify-xr
+          data-shopify-model3d-id="{{ media.id }}"
+          data-shopify-title="{{ product.title | escape }}"
+          data-shopify-xr-hidden
+          >
+          {% render 'icon-3d-model' %}
+          {{ 'products.product.xr_button' | t }}
+        </button>
+      {%- endif -%}
+    {%- else -%}
+      </deferred-media>
+    {%- endif -%}
+  {%- endif -%}
 </div>
-

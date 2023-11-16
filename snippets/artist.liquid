@@ -1,0 +1,20 @@
+{%- assign collection_metafields = collection.metafields -%}
+{%- assign field = collection_metafields.custom.artiests -%}
+
+
+{% if field != blank %}
+  <section class="section-artist">
+    <h1 class="artist-section-title">Meet our artists</h1>
+    <div class="swiper artist-slider">
+      <div class=" swiper-wrapper">
+        {% for field in field.value %}
+          <div class="artist-item swiper-slide">
+            <img class="artist-image" src="{{ field.artist_image | img_url : "1000x" }}" width height loading="lazy" alt="{{ field.artist_image }}" /> 
+            <h2 class="artist-name">{{ field.artist_name }}</h2>
+          </div>
+      {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
